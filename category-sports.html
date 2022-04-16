@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="This is where you can find all the product list" />
+        <meta name="keyword" content="game store, buy games, gamehub" />
+        <title>GameHub | Info</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="css/product.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+    <body id="body">
+      <header>
+        <a href="index.html"><img class="logo" src="images/gamehub-logo_bg.png" alt="Web-logo" /></a>
+     
+            <!-- Hamburger Menu -->
+            <input type="checkbox" class="checkbox" hidden id="click">
+            <div class="animation">
+              <div class="hamburger-icon">
+                <label for="click">
+                  <span class="line line-1"></span>
+                  <span class="line line-2"></span>
+                  <span class="line line-3"></span>
+                </label>
+              </div>
+            </div>
+        
+          <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="product.html">Product</a>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact</a>
+            
+            <div class="search-container">
+                <form class="form">
+                    <input type="text" placeholder="Search.." name="search">
+                    <a class="mag-icon" href="http://google.com">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                </form>
+            </div>
+          </div>
+      </header>
+      <div class="home-container">
+        <main>
+          <!-- mmorpg, shooter, pvp, mmofps anime battle royale MOBA MMOFPS Open World MMORTS -->
+          <h1>Product List</h1>
+
+    <!-- Dropdown Category Filter -->
+    <label class="dropdown">
+      <div class="dd-button">
+        Category
+      </div>
+      <input type="checkbox" class="dd-input" id="dropdown">
+      <ul class="dd-menu">
+        <a href="product.html"><li class="filter-btn" id="all">ALL GAMES</li></a>
+            <a class="filter-link" href="category-mmorpg.html"><li class="filter-btn" id="all">MMORPG</li></a>
+            <a class="filter-link" href="category-shooter.html"><li class="filter-btn" id="all">SHOOTER</li></a>
+            <a class="filter-link" href="category-strategy.html"><li class="filter-btn" id="all">STRATEGY</li></a>
+            <a class="filter-link" href="category-moba.html"><li class="filter-btn" id="all">MOBA</li></a>
+            <a class="filter-link" href="category-card-games.html"><li class="filter-btn" id="all">CARD GAMES</li></a>
+            <a class="filter-link" href="category-racing.html"><li class="filter-btn" id="all">RACING</li></a>
+            <a class="filter-link" href="category-sports.html"><li class="filter-btn" id="all">SPORTS</li></a>
+            <a class="filter-link" href="category-social.html"><li class="filter-btn" id="all">SOCIAL</li></a>
+            <a class="filter-link" href="category-fighting.html"><li class="filter-btn" id="all">FIGHTING</li></a>
+            <li class="divider"></li>
+      </ul>
+    </label>
+          <hr>
+          <!-- API results -->
+          <div class="results" id="games">
+            <div class="loader"></div>
+            <div class="genre-container"> 
+          </div>
+        
+        </main>
+
+      </div>
+       
+      <!-- Footer -->
+      <footer>
+        <div class="footer_container">
+          <span class="footer-links"> <a href="about.html">About</a> | <a href="#">FAQ</a> | <a href="#">Privacy policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Cookies</a></span>
+          <div class="social-media">
+            <span><a href="http://facebook.com"><i class="fab fa-facebook"></i></a> <a href="http://instagram.com"><i class="fab fa-instagram"></i></a> <a href="http://youtube.com"><i class="fab fa-youtube"></i></a> <a href="http://pinterest.com"><i class="fab fa-pinterest"></i></a> <a href="http://twitter.com/"><i class="fab fa-twitter"></i></a> <a href="http://discord.com"><i class="fab fa-github"></i></a></span>
+          </div>
+          <div class="copy-container">
+            <span class="copy">Copyright &copy; GameHub.com 2021</span>
+          </div>
+        </div>
+      </footer>
+      <a href="#body" id="topButton" title="Go to Top">Top</a>
+      <script src="/js/sport.js" crossorigin="anonymous"></script>
+    </body>
+</html>

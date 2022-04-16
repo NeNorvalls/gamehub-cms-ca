@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Online Buy and resell Game Store by GameHub" />
+        <meta name="keyword" content="game store, buy games, gamehub" />
+        <title>GameHub | Home</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+    <body id="body">
+      <header>
+    
+        <!-- Weblogo -->
+        <a href="index.html"><img class="logo" src="images/gamehub-logo_bg.png" alt="Web-logo" /></a>
+    
+        <!-- Hamburger Menu -->
+        <input type="checkbox" class="checkbox" hidden id="click">
+        <div class="animation">
+          <div class="hamburger-icon">
+            <label for="click">
+              <span class="line line-1"></span>
+              <span class="line line-2"></span>
+              <span class="line line-3"></span>
+            </label>
+          </div>
+        </div>
+    
+        <!-- Navigation -->
+        <div class="topnav">
+          <a href="index.html">Home</a>
+          <a href="product.html">Product</a>
+          <a href="login.html">Login</a>
+          <a href="contact.html">Contact</a>
+
+          <div class="search-container">
+            <form class="form">
+              <input type="text" placeholder="Search.." name="search">
+              <a class="mag-icon" href="http://google.com">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </a>
+            </form>
+          </div>
+        </div>
+    
+      </header>
+      <main>
+        <div class="home-container">
+          <h1>Welcome to the universe of games!</h1>
+          <div class="btn-container">
+            <p class="check-out">Click here to check out our newest games!</p>
+            <a href="product.html" class="index-btn gen-btn">Check it out!</a>
+          </div>
+          <hr>
+
+          <section id="featured" class="section">
+            <h2>Popular Games</h2>
+            <div class="results">
+              <div class="loader"></div>
+            </div>
+            <div class="games-container"></div>
+          </section>
+          <div class="btn-container">
+            <a href="product.html" class="index-btn">View More...</a>
+          </div>
+          <div class="news-container">
+            <h2 class="news-h2">News</h2>
+            <div class="news-paragraph">
+                <p>
+                    Watch out! Mysterious agent called Black, with his previous mission involving a terrorist operation.
+                    An amazing and thrilling game adventure that suited to your budget. Grab a copy now!
+                    Love to be challenge? Pingpong games will sweat you with excitement and full of fun.
+                    Have the time travelling experience in outer space.Space war is here! Avail a copy now!
+                </p>
+                <p>Want to sell your games? <a href="sell.html">Click here!</a></p>
+              </div>
+            
+          </div>
+        </div>
+      </main>
+    
+      <!-- Footer -->
+      <footer>
+        <div class="footer_container">
+          <span class="footer-links"> <a href="about.html">About</a> | <a href="#">FAQ</a> | <a href="#">Privacy policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Cookies</a></span>
+          <div class="social-media">
+            <span><a href="http://facebook.com"><i class="fab fa-facebook"></i></a> <a href="http://instagram.com"><i class="fab fa-instagram"></i></a> <a href="http://youtube.com"><i class="fab fa-youtube"></i></a> <a href="http://pinterest.com"><i class="fab fa-pinterest"></i></a> <a href="http://twitter.com/"><i class="fab fa-twitter"></i></a> <a href="http://discord.com"><i class="fab fa-github"></i></a></span>
+          </div>
+          <div class="copy-container">
+            <span class="copy">Copyright &copy; GameHub.com 2021</span>
+          </div>
+        </div>
+      </footer>
+      <a href="#body" id="topButton" title="Go to Top">Top</a>
+      <script src="/js/script.js" crossorigin="anonymous"></script>
+      <script src="/cart/cart.js"></script>
+    </body>
+</html>
