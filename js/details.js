@@ -1,3 +1,4 @@
+
 const gameContainer = document.querySelector(".game-details");
 
 const queryString = document.location.search;

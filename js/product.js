@@ -38,8 +38,8 @@ async function fetchGames() {
 											</div>
 											<div class="game-details">
 												<h4 class="game-title">${game[i].name}</h4>
-												<p class="game-info">${game[i].genre}</p>
-												<p class="game-info">${game[i].platform}</p>
+												<p class="game-info">${game[i].categories[0].name}</p>
+												<p class="game-info">${game[i].tags[0].name}</p>
 												<button class="card-get-btn">Get</button>
 												<p><span class="game-price">${game[i].prices.currency_symbol}${game[i].prices.price}</span></p>
 											</div>
