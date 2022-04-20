@@ -1,25 +1,27 @@
 const gamesContainer = document.querySelector(".results");
 
 // const mmorpg = "https://mmo-games.p.rapidapi.com/games";
-const gamesURL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/store/v1/products?per_page=50&consumer_key=ck_8b7263146b06be0805c5e9b1973c98fb03a3f819&consumer_secret=cs_0477da413d9d64e0957e4e3acfd8c68effa3dbfc"
+// v1 working api "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/store/v1/products?per_page=50"
+// const gamesURL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/?per_page=50";
+// const key = "&consumer_key=ck_9fdfd6408c40e2aa4e0fb91a1a3d2d6b017266b4&consumer_secret=cs_a8b68264598dc44702fb82feba6cfc257bee154f";
+// const corsFix = "https://noroffcors.herokuapp.com/";
 
-const corsFix = "https://noroffcors.herokuapp.com/"
+// const corsUrl = corsFix + gamesURL;
 
-const corsUrl = corsFix + gamesURL;
+// async function fetchGames() {
 
-async function fetchGames() {
+// 	try {
+// 		const response = await fetch(corsUrl + key);
 
-	try {
-		const response = await fetch(corsUrl, {
-			"method": "GET",
-			"headers": {
-			// "x-rapidapi-host": "mmo-games.p.rapidapi.com",
-			// "x-rapidapi-key": "e571381396mshbf0c399aa256715p147efcjsn84b2bc11dfa5"
-		}});
+const URL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/";
 
-		const json = await response.json();
+const key = "?consumer_key=ck_9fdfd6408c40e2aa4e0fb91a1a3d2d6b017266b4&consumer_secret=cs_a8b68264598dc44702fb82feba6cfc257bee154f";
 
-		console.log(json);
+async function getGames() {
+  try {
+    const response = await fetch(URL + key);
+    const results = await response.json();
+    console.log(results);
 
 		gamesContainer.innerHTML = "";
 
@@ -52,4 +54,4 @@ async function fetchGames() {
 	}
 }
 
-fetchGames();
+getGames();

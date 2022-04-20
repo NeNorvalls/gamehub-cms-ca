@@ -1,6 +1,6 @@
 const gamesContainer = document.querySelector(".results");
 
-const strategyURL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/store/v1/products?per_page=50&consumer_key=ck_8b7263146b06be0805c5e9b1973c98fb03a3f819&consumer_secret=cs_0477da413d9d64e0957e4e3acfd8c68effa3dbfc";
+const strategyURL = "https://nenorvalls.no/flower-power/gamehub/https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/?consumer_key=ck_8b7263146b06be0805c5e9b1973c98fb03a3f819&consumer_secret=cs_0477da413d9d64e0957e4e3acfd8c68effa3dbfc?per_page=50&consumer_key=ck_8b7263146b06be0805c5e9b1973c98fb03a3f819&consumer_secret=cs_0477da413d9d64e0957e4e3acfd8c68effa3dbfc";
 
 
 const corsFix = "https://noroffcors.herokuapp.com/"
@@ -41,7 +41,7 @@ async function fetchGames() {
 			   									<button class="card-get-btn">Get</button>
 			   									<p><span class="game-price">${game[i].prices.currency_symbol}${game[i].prices.price}</span></p>
 		   									</div>
-	   									 </a>`;
+	   									</a>`;
 		};
 	}
 	catch(error) {

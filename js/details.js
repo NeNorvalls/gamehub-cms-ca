@@ -53,7 +53,6 @@ function createHTML(game) {
                                 <div class="game-info-container">
                                     <p class="game-info">${game.description}</p>
                                     <p><span class="game-info"Genre: ${game.genre}</span></p>
-                                    <p><span class="game-info">Released: ${game.release_date}</span></p>
                                 </div>
 
                                `
