@@ -1,53 +1,44 @@
-const gamesContainer = document.querySelector(".results");
+const URL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/categories/";
 
-const strategyURL = "https://nenorvalls.no/flower-power/gamehub/https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/?consumer_key=ck_8b7263146b06be0805c5e9b1973c98fb03a3f819&consumer_secret=cs_0477da413d9d64e0957e4e3acfd8c68effa3dbfc?per_page=50&consumer_key=ck_8b7263146b06be0805c5e9b1973c98fb03a3f819&consumer_secret=cs_0477da413d9d64e0957e4e3acfd8c68effa3dbfc";
+const key = "?consumer_key=ck_9fdfd6408c40e2aa4e0fb91a1a3d2d6b017266b4&consumer_secret=cs_a8b68264598dc44702fb82feba6cfc257bee154f";
 
+const gamesContainer = document.querySelector(".results")
 
-const corsFix = "https://noroffcors.herokuapp.com/"
+async function getGames() {
+    try {
+        const response = await fetch(URL + key);
+        const results = await response.json();
+        console.log(results);
 
-const corsUrl = corsFix + strategyURL;
+        gamesContainer.innerHTML = "";
 
-async function fetchGames() {
+        const json = results;
+        const game = json;
 
-	try {
-		const response = await fetch(corsUrl, {
-			"method": "GET",
-			"headers": {
-			"x-rapidapi-host": "mmo-games.p.rapidapi.com",
-			"x-rapidapi-key": "e571381396mshbf0c399aa256715p147efcjsn84b2bc11dfa5"
-		}});
+        for (let i = 0; i < game.length; i++) {
 
-		const json = await response.json();
+            if (i === 50) {
+                break;
 
-		console.log(json);
+            }
 
-		gamesContainer.innerHTML = "";
+            gamesContainer.innerHTML += `<a href="details.html?id=${game[i].id}" class="card">
+            <div class="grid-container">
+                <img class="game-thumb" src="${game[i].images[0].src}" />
+            </div>
+            <div class="game-details">
+                <h4 class="game-title">${game[i].name}</h4>
+                <p class="game-info">${game[i].categories[0].name}</p>
+                <p class="game-info">${game[i].tags[0].name}</p>
+                <button class="card-get-btn">Get</button>
 
-		const game = json;
-
-		for (let i = 0; i < game.length; i++) {
-
-			if (i === 72) {
-				break;
-			}
-			gamesContainer.innerHTML += `<a href="details.html?id=${game[i].id}" class="card">
-											<div class="grid-container">
-												<img class="game-thumb" src="${game[i].images[0].src}"/>
-		   									</div>
-		   									<div class="game-details">
-			   									<h4 class="game-title">${game[i].name}</h4>
-			   									<p class="game-info">${game[i].categories[0].name}</p>
-			   									<p class="game-info">${game[i].tags[0].name}</p>
-			   									<button class="card-get-btn">Get</button>
-			   									<p><span class="game-price">${game[i].prices.currency_symbol}${game[i].prices.price}</span></p>
-		   									</div>
-	   									</a>`;
-		};
-	}
-	catch(error) {
-		console.log(error);
-		gamesContainer.innerHTML = message("error", "Something went wrong!", error);
-	}
+            </div>
+        </a>;`
+        };
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
 
-fetchGames();
+getGames();
