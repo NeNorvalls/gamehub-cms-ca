@@ -35,7 +35,7 @@ async function getGames() {
 
 
             </div>
-        </a>;`
+        </a>`;
         };
     }
     catch (error) {

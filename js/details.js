@@ -7,7 +7,6 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-console.log(id);
 
 
 // const detailsURL = "https://free-to-play-games-database.p.rapidapi.com/api/game?rapidapi-key=e571381396mshbf0c399aa256715p147efcjsn84b2bc11dfa5" + id;
@@ -15,7 +14,6 @@ const detailsURL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/pro
 
 const key = "?consumer_key=ck_9fdfd6408c40e2aa4e0fb91a1a3d2d6b017266b4&consumer_secret=cs_a8b68264598dc44702fb82feba6cfc257bee154f"
 
-console.log(detailsURL);
 
 async function getGame() {
 
