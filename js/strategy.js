@@ -1,6 +1,6 @@
-const URL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/categories/19/";
+const URL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/"
 
-const key = "?consumer_key=ck_9fdfd6408c40e2aa4e0fb91a1a3d2d6b017266b4&consumer_secret=cs_a8b68264598dc44702fb82feba6cfc257bee154f";
+const key = "?consumer_key=ck_9fdfd6408c40e2aa4e0fb91a1a3d2d6b017266b4&consumer_secret=cs_a8b68264598dc44702fb82feba6cfc257bee154f"
 
 const gamesContainer = document.querySelector(".results")
 
@@ -30,10 +30,11 @@ async function getGames() {
                 <h4 class="game-title">${game[i].name}</h4>
                 <p class="game-info">${game[i].categories[0].name}</p>
                 <p class="game-info">${game[i].tags[0].name}</p>
+				<p><span class="game-price">$${game[i].price}.99</span></p>
                 <button class="card-get-btn">Get</button>
 
             </div>
-        </a>;`
+        </a>`;
         };
     }
     catch (error) {
