@@ -8,11 +8,9 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 
-
-// const detailsURL = "https://free-to-play-games-database.p.rapidapi.com/api/game?rapidapi-key=e571381396mshbf0c399aa256715p147efcjsn84b2bc11dfa5" + id;
 const detailsURL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/" + id;
 
-const key = "?consumer_key=ck_9fdfd6408c40e2aa4e0fb91a1a3d2d6b017266b4&consumer_secret=cs_a8b68264598dc44702fb82feba6cfc257bee154f"
+const key = "?consumer_key=ck_6131069f7cf8fe34078860b7f32de680257422f1&consumer_secret=cs_81c77c45ce7a85e90c9f21bc157818964c403cc3"
 
 
 async function getGame() {
@@ -21,11 +19,10 @@ async function getGame() {
         const response = await fetch(detailsURL + key)
 
         const details = await response.json();
-        console.log(details);
 
         const newPageTitle = document.querySelector("title");
 
-        newPageTitle.innerHTML = `${details.title}`;
+        newPageTitle.innerHTML = `${details.name}`;
 
         createHTML(details);
     }
