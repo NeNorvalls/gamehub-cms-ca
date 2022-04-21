@@ -2,7 +2,11 @@ const URL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/"
 
 const key = "?consumer_key=ck_9fdfd6408c40e2aa4e0fb91a1a3d2d6b017266b4&consumer_secret=cs_a8b68264598dc44702fb82feba6cfc257bee154f"
 
+const strategy = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/games?category=strategy";
+
 const gamesContainer = document.querySelector(".results")
+
+const categories = document.querySelectorAll(".filter-btn");
 
 async function getGames() {
     try {
@@ -33,6 +37,7 @@ async function getGames() {
 				<p><span class="game-price">$${game[i].price}.99</span></p>
                 <button class="card-get-btn">Get</button>
 
+
             </div>
         </a>`;
         };
@@ -43,3 +48,27 @@ async function getGames() {
 }
 
 getGames();
+
+
+// Items per-page filter
+perPage.onchange = function (event) {
+	const newUrl = baseUrl + `?per_page=${event.target.value}`;
+	productsContainer.innerHTML = "";
+	getProducts(newUrl);
+  };
+  
+  // Categories Filter
+  categories.forEach(function (category) {
+	category.onclick = function (event) {
+	  let newUrl;
+	  if (event.target.id === "all") {
+		const categoryAll = event.target.value;
+		newUrl = baseUrl + `?all=${categoryAll}`;
+	  } else {
+		const categoryChosen = event.target.value;
+		newUrl = baseUrl + `?category=${categoryChosen}`;
+	  }
+	  productsContainer.innerHTML = "";
+	  getProducts(newUrl);
+	};
+  });

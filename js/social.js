@@ -1,52 +1,46 @@
-const gamesContainer = document.querySelector(".results");
+const URL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products?per_page=:50/"
 
-const social = "https://mmo-games.p.rapidapi.com/games?category=social";
+const key = "?consumer_key=ck_9fdfd6408c40e2aa4e0fb91a1a3d2d6b017266b4&consumer_secret=cs_a8b68264598dc44702fb82feba6cfc257bee154f"
+
+const gamesContainer = document.querySelector(".results")
+
+async function getGames() {
+    try {
+        const response = await fetch(URL + key);
+        const results = await response.json();
+        console.log(results);
+
+        gamesContainer.innerHTML = "";
+
+        const json = results;
+        const game = json;
+
+        for (let i = 0; i < game.length; i++) {
+
+            if (i === 50) {
+                break;
+
+            }
+
+            gamesContainer.innerHTML += `<a href="details.html?id=${game[i].id}" class="card">
+            <div class="grid-container">
+                <img class="game-thumb" src="${game[i].images[0].src}" />
+            </div>
+            <div class="game-details">
+                <h4 class="game-title">${game[i].name}</h4>
+                <p class="game-info">${game[i].categories[0].name}</p>
+                <p class="game-info">${game[i].tags[0].name}</p>
+				<p><span class="game-price">$${game[i].price}.99</span></p>
+                <button class="card-get-btn">Get</button>
 
 
-const corsFix = "https://noroffcors.herokuapp.com/"
-
-const corsUrl = corsFix + social;
-
-async function fetchGames() {
-
-	try {
-		const response = await fetch(corsUrl, {
-			"method": "GET",
-			"headers": {
-			"x-rapidapi-host": "mmo-games.p.rapidapi.com",
-			"x-rapidapi-key": "e571381396mshbf0c399aa256715p147efcjsn84b2bc11dfa5"
-		}});
-
-		const json = await response.json();
-
-		console.log(json);
-
-		gamesContainer.innerHTML = "";
-
-		const game = json;
-
-		for (let i = 0; i < game.length; i++) {
-
-			if (i === 72) {
-				break;
-			}
-			gamesContainer.innerHTML += `<a href="details.html?id=${game[i].id}" class="card">
-										 	<div class="grid-container">
-											 	<img class="game-thumb" src="${game[i].thumbnail}"/>
-											</div>
-											<div class="game-details">
-												<h4 class="game-title">${game[i].title}</h4>
-												<p class="game-genre">${game[i].genre}</p>
-												<button class="card-get-btn">Get</button>
-												<p><span class="game-price">$25</span></p>
-											</div>
-										</a>`;
-		};
-	}
-	catch(error) {
-		console.log(error);
-		gamesContainer.innerHTML = message("error", "Something went wrong!", error);
-	}
+            </div>
+        </a>`;
+        };
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
 
-fetchGames();
+getGames();
