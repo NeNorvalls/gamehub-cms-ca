@@ -1296,6 +1296,7 @@ span.copy {
   border-radius: 4px;
   padding: 10px 30px 10px 20px;
   background-color: #334c87;
+  color:#fff700;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -1310,11 +1311,13 @@ span.copy {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid white;
+  border-top: 5px solid #fff;
 }
 
 .dd-button:hover {
   background-color: #1d2540;
+  border: 2px solid #fff700;
+  color:#fff;
 }
 
 .dd-input {
