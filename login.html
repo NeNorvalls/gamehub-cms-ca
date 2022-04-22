@@ -44,11 +44,11 @@
       <main>
         <div class="login-container">
           <h1 id="login-heading">Login Here</h1>
-          <form>
-            <input class="input" type="email" name="email" placeholder="Email" />
-            <input class="input" type="password" name="password" placeholder="Password" />
+          <form action="#" id="contactForm" onsubmit="return validateForm();">
+            <input class="input" type="email" name="email" placeholder="Email" id="email" />
+            <input class="input" type="password" name="password" placeholder="Password" id="password" />
             <div class="login-btn-container">
-              <a class="login-btn" href="index.html">Login</a>
+              <a class="login-btn" href="#">Login</a>
             </div>
             <div class="login-link">
               <a class="forgot-link" href="#">Forgot your password?</a>
@@ -75,6 +75,6 @@
         </div>
       </footer>
       <a href="#body" id="topButton" title="Go to Top">Top</a>
-      <script src="/js/script.js" crossorigin="anonymous"></script>
+      <script src="/js/login.js" crossorigin="anonymous"></script>
     </body>
 </html>
