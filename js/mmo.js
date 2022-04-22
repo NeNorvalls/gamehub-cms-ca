@@ -17,11 +17,7 @@ async function getGames() {
 
         for (let i = 0; i < game.length; i++) {
 
-            if (i === 50) {
-                break;
-
-            }
-
+       
             gamesContainer.innerHTML += `<a href="details.html?id=${game[i].id}" class="card">
             <div class="grid-container">
                 <img class="game-thumb" src="${game[i].images[0].src}" />
