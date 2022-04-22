@@ -17,7 +17,6 @@ async function getGames() {
 
         for (let i = 0; i < game.length; i++) {
 
-        
 
             gamesContainer.innerHTML += `<a href="details.html?id=${game[i].id}" class="card">
             <div class="grid-container">

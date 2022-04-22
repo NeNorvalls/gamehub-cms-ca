@@ -1,6 +1,6 @@
-const URL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/"
+const URL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products"
 
-const key = "?consumer_key=ck_6131069f7cf8fe34078860b7f32de680257422f1&consumer_secret=cs_81c77c45ce7a85e90c9f21bc157818964c403cc3&category=29"
+const key = "?consumer_key=ck_6131069f7cf8fe34078860b7f32de680257422f1&consumer_secret=cs_81c77c45ce7a85e90c9f21bc157818964c403cc3&category=27"
 
 const gamesContainer = document.querySelector(".results")
 
@@ -17,7 +17,6 @@ async function getGames() {
 
         for (let i = 0; i < game.length; i++) {
 
-        
 
             gamesContainer.innerHTML += `<a href="details.html?id=${game[i].id}" class="card">
             <div class="grid-container">
