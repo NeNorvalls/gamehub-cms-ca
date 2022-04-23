@@ -900,6 +900,9 @@ p {
   color: #1d2540;
   transition: 0.2s ease-in;
 }
+.contact-sub-btn {
+  background-color: #fff700;
+}
 
 .checkout-input-container {
   width: 100%;
