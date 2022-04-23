@@ -44,28 +44,36 @@
       <main>
         <div class="contact-wrapper">
           
-        <form action="#" id="contactForm" onsubmit="return validateForm();">
-          <h3>Contact us</h3>
-          <h4>Contact us today and get reply within 24 hours!</h4>
-          <div id="errorMessage"></div>
-          <div class="input-field">
-            <input type="text" id="name" placeholder="Full Name">
+          <form action="#" id="contactForm" onsubmit="return validateForm();"> 
+
+            <h3>Contact us</h3>
+
+            <h4>Contact us today and get reply within 24 hours!</h4>
+
+            <div id="errorMessage"></div>
+            <div class="input-field">
+              <input type="text" id="name" placeholder="Full Name">
+            </div>
+
+            <div class="input-field">
+              <input type="text" id="email" placeholder="Email Address">
+            </div>
+
+            <div class="input-field">
+              <input type="text" id="address" placeholder="Address">
+            </div>
+
+            <div class="input-field">
+              <textarea placeholder="Message" id="message"></textarea>
+            </div>
+
+            <div>
+              <input type="submit" id="submit-btn"  onclick="resetForm()">
+            </div>
+
+          </form>
+  
           </div>
-          <div class="input-field">
-            <input type="text" id="email" placeholder="Email Address">
-          </div>
-          <div class="input-field">
-            <input type="text" id="address" placeholder="Address">
-          </div>
-          <div class="input-field">
-            <textarea placeholder="Message" id="message"></textarea>
-          </div>
-          <div>
-            <input class="contact-sub-btn" type="submit">
-          </div>
-        </form>
-        </div>
-    
       </main>
     
       <!-- Footer -->
@@ -82,5 +90,6 @@
       </footer>
       <a href="#body" id="topButton" title="Go to Top">Top</a>
       <script src="/js/contact.js"></script>
+      
     </body>
 </html>

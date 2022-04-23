@@ -600,7 +600,7 @@ input[type="radio"] {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: transparent;
+  background-color: #334c87;
   margin-bottom: 3rem;
   border-radius: 15px;
   color: #fff;
@@ -627,13 +627,13 @@ input[type="email"] {
 
 .login-btn {
   padding: 6px 10px 6px 10px;
-  background-color: #334c87;
-  color: #fff;
+  background-color: #fff700;
+  color: #1d2540;
 }
 
 .login-btn:hover {
-  background-color: #fff700;
-  color: #1d2540;
+  background-color: #1d2540;
+  color: #fff;
   transition: 0.2s ease-in;
 }
 
@@ -900,9 +900,7 @@ p {
   color: #1d2540;
   transition: 0.2s ease-in;
 }
-.contact-sub-btn {
-  background-color: #fff700;
-}
+
 
 .checkout-input-container {
   width: 100%;
@@ -1319,7 +1317,7 @@ span.copy {
 
 .dd-button:hover {
   background-color: #1d2540;
-  border: 2px solid #fff700;
+  border: 1px solid #fff700;
   color:#fff;
 }
 
@@ -1431,6 +1429,11 @@ textarea::-webkit-scrollbar {
   font-size: 17px;
   cursor: pointer;
   border-radius: 3px;
+}
+
+#contactForm input[type="submit"]:hover {
+  background-color: #fff700;
+  color: #1d2540;
 }
 
 #errorMessage {

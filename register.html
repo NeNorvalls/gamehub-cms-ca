@@ -43,17 +43,21 @@
       </header>
       <main>
         <div class="reg-container">
+
           <h1>Register</h1>
-          <form id="register-form">
+
+          <form id="register-form" onsubmit="return validateForm();">
+
             <label for="fname">Fullname</label>
             <input class="input" type="text" id="fname" placeholder="fullname">
 
             <label for="user">Username</label>
             <input class="input" type="text" id="user" placeholder="username">
 
+
             <label for="email">EmailAddress</label>
             <input class="input" type="email" id="email" placeholder="Email address">
-
+        
             <label for="pass">Password</label>
             <input class="input" type="password" id="pass" placeholder="enter password">
 
@@ -69,8 +73,9 @@
             </div>
 
             <div class="reg-btn-container">
-              <a id="reg-btn" href="login.html">Register</a>
+              <a id="reg-btn" href="#">Register </a>
             </div>
+            
           </form>
         </div>
       </main>
@@ -88,6 +93,6 @@
         </div>
       </footer>
       <a href="#body" id="topButton" title="Go to Top">Top</a>
-      <script src="/js/script.js" crossorigin="anonymous"></script>
+      <script src="/js/register.js" crossorigin="anonymous"></script>
     </body>
 </html>

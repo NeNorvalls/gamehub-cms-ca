@@ -1,10 +1,12 @@
 function validateForm() {
+
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const address = document.getElementById("address").value;
   const message = document.getElementById("message").value;
   const errorMessage = document.getElementById("errorMessage");
-  const modal = document.getElementById("confirm-popup");
+  const form = document.getElementById("contactForm").reset();
+  const submitBtn = document.getElementById("submit-btn");
 
   errorMessage.style.display = "block";
 
@@ -29,14 +31,12 @@ function validateForm() {
     errorMessage.innerHTML = error;
     return false;
   }
+  
   alert("Form submitted successfully!");
+  submitBtn.onclick = () => {
+    location.href = "/index.html";
+  };
+
   return true;
-  function redirectHome() {
-    window.location.href ="https://nenorvalls-gamehub-cms-ca.netlify.app/index.html";
-  }
-
-  const result = redirectHome()
-
-  return result;
 
 }
