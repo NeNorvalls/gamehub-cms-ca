@@ -1475,3 +1475,14 @@ textarea::-webkit-scrollbar {
 .input {
   width: 100%;
 }
+
+/* Confirmation Popup */
+
+#confirm-popup {
+  margin: 0 auto;
+}
+
+.return-btn {
+  display: flex;
+  justify-content: center;
+}

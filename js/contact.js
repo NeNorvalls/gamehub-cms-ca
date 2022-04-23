@@ -4,6 +4,7 @@ function validateForm() {
   const address = document.getElementById("address").value;
   const message = document.getElementById("message").value;
   const errorMessage = document.getElementById("errorMessage");
+  const modal = document.getElementById("confirm-popup");
 
   errorMessage.style.display = "block";
 
@@ -30,5 +31,12 @@ function validateForm() {
   }
   alert("Form submitted successfully!");
   return true;
+  function redirectHome() {
+    window.location.href ="https://nenorvalls-gamehub-cms-ca.netlify.app/index.html";
+  }
+
+  const result = redirectHome()
+
+  return result;
 
 }
