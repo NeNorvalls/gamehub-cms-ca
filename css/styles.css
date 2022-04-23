@@ -37,21 +37,21 @@ main {
   width: 2.5rem;
 }
 
-.c-box:checked ~ .topnav {
+.checkbox:checked ~ .topnav {
   margin-left: 0;
   transition: all 0.4s;
 }
 
-.c-box:checked ~ .animation .line-1 {
+.checkbox:checked ~ .animation .line-1 {
   transform: rotate(-405deg) translate(-12px, 6px);
   width: 2.5rem;
 }
 
-.c-box:checked ~ .animation .line-2 {
+.checkbox:checked ~ .animation .line-2 {
   opacity: 0;
 }
 
-.c-box:checked ~ .animation .line-3 {
+.checkbox:checked ~ .animation .line-3 {
   transform: rotate(405deg) translate(-12px, -6px);
   width: 2.5rem;
 }
