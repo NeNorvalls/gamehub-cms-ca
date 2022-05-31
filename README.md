@@ -1,8 +1,8 @@
-#GameHub
+# GameHub
 
 ![GameHub logo](https://i.ibb.co/7VN5kRv/gamehub-logo-bg.png)
 
-##Description
+## Description
 
 _Gamehub_ is an online store where users can purchase computer games. This gaming market platform lets you buy video games online for any devices.
 It is a website online store with huge range of games selection for customer with age of 18 to 25.
@@ -10,7 +10,7 @@ In this project we use the WordPress REST API that is running on the web host to
 We use JavaScript to fetch the list of WOrdpress products in order to display it on the site instead of having the product hardcoded into the html.
 The JavaScript call the API and we are using a Headless CMS.
 
-###Site Structure
+### Site Structure
 
 - Home Page
 - Product List
@@ -25,12 +25,13 @@ The JavaScript call the API and we are using a Headless CMS.
 - Register Page
 - Sell Page
 
-##Built With
+## Built With
 
 - HTML
 - CSS
 - JavaScript
 - WordPress
 
-##Contact
+## Contact
+
 _E-post: honeygeeh27@gmail.com_
