@@ -28,9 +28,15 @@ The JavaScript calls the API, and we are using a Headless CMS.
 ## Built With
 
 - HTML
+  - Semantic elements, tags
+  - attributes
 - CSS
+  - Typography
+  - Accessibility
 - JavaScript
+  - Fetch API
 - WordPress
+  - Headless CMS
 
 ## Contact
 
