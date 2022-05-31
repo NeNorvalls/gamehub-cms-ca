@@ -30,7 +30,8 @@ The JavaScript calls the API, and we are using a Headless CMS.
 
 - HTML
   - Semantic elements, tags
-  - attributes
+  - Attributes
+  - Hamburger
 - CSS
   - Typography
   - Accessibility
